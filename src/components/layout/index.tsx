@@ -1,13 +1,14 @@
 import React from "react";
 import { Header as DefaultHeader } from "./header";
 import { Sider as DefaultSider } from "./sider";
+import { Title } from "./title";
 import { Box } from "@mui/material";
 import type { RefineLayoutLayoutProps } from "@refinedev/mui";
 
 export const Layout: React.FC<RefineLayoutLayoutProps> = ({
   Sider,
   Header,
-  Title,
+
   Footer,
   OffLayoutArea,
   children,

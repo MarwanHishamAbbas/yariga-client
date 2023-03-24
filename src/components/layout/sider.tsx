@@ -208,13 +208,17 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({
                   backgroundColor: isSelected ? "#475BE8" : "transparent",
                 },
                 justifyContent: "center",
+                margin: "10px auto",
+                borderRadius: "12px",
+                minHeight: "56px",
+                width: "90%",
               }}
             >
               <ListItemIcon
                 sx={{
                   justifyContent: "center",
                   minWidth: 36,
-                  color: "secondary.contrastText",
+                  color: isSelected ? "#fff" : "#808191",
                 }}
               >
                 {icon ?? <ListOutlined />}
@@ -225,6 +229,8 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({
                   noWrap: true,
                   fontSize: "14px",
                   fontWeight: isSelected ? "bold" : "normal",
+                  color: isSelected ? "#fff" : "#808191",
+                  marginLeft: "10px",
                 }}
               />
             </ListItemButton>
@@ -265,7 +271,9 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({
             sx={{
               justifyContent: "center",
               minWidth: 36,
-              color: "secondary.contrastText",
+              color: "#808191",
+              marginLeft: "6px",
+              marginRight: "14px",
             }}
           >
             <Dashboard />
@@ -311,13 +319,19 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({
       <ListItemButton
         key="logout"
         onClick={handleLogout}
-        sx={{ justifyContent: "center" }}
+        sx={{
+          justifyContent: "center",
+          margin: "10px auto",
+          borderRadius: "12px",
+          minHeight: "56px",
+          width: "90%",
+        }}
       >
         <ListItemIcon
           sx={{
             justifyContent: "center",
             minWidth: 36,
-            color: "secondary.contrastText",
+            color: "#808191",
           }}
         >
           <Logout />
@@ -354,7 +368,7 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({
   };
 
   const drawer = (
-    <List disablePadding sx={{ mt: 1, color: "secondary.contrastText" }}>
+    <List disablePadding sx={{ mt: 1, color: "#808191" }}>
       {renderSider()}
     </List>
   );
@@ -414,7 +428,7 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({
             display: { xs: "none", md: "block" },
             "& .MuiDrawer-paper": {
               width: drawerWidth,
-              bgcolor: "secondary.main",
+              bgcolor: "#FCFCFC",
               overflow: "hidden",
               transition: "width 200ms cubic-bezier(0.4, 0, 0.6, 1) 0ms",
             },
@@ -447,6 +461,9 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({
               textAlign: "center",
               borderRadius: 0,
               borderTop: "1px solid #ffffff1a",
+              "&:hover": {
+                background: "#1e36e8",
+              },
             }}
             fullWidth
             size="large"
@@ -462,7 +479,7 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({
             top: "64px",
             left: "0px",
             borderRadius: "0 6px 6px 0",
-            bgcolor: "secondary.main",
+            bgcolor: "#475be8",
             zIndex: 1199,
             width: "36px",
           }}

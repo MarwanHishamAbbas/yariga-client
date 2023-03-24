@@ -1,12 +1,11 @@
 import { useEffect, useRef } from "react";
 import { useLogin } from "@refinedev/core";
 import { CredentialResponse } from "../interfaces/google";
-import { Box } from "@mui/material";
 import { yariga } from "assets";
 
 // Todo: Update your Google Client ID here
 
-export const Login: React.FC = () => {
+const Login: React.FC = () => {
   const { mutate: login } = useLogin<CredentialResponse>();
 
   const GoogleButton = (): JSX.Element => {
@@ -56,3 +55,5 @@ export const Login: React.FC = () => {
     </div>
   );
 };
+
+export default Login;
