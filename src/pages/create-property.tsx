@@ -31,7 +31,8 @@ const CreateProperty = () => {
 
   const onFinishHandler = async (data: FieldValues) => {
     if (!propertyImage.name) return alert("Please Upload a Photo");
-    await onFinish({ ...data, photo: propertyImage, email: user?.email });
+    // Sent to server controller via refine
+    await onFinish({ ...data, photo: propertyImage.url, email: user?.email });
   };
 
   return (
